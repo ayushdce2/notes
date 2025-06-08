@@ -1,0 +1,43 @@
+=================
+For new repo
++++++++++++++++++
+-> create folder with same name in hard drive
+-> git init
+-> git remote add origin https://repository.remote.url
+==================
+echo "" >.gitignore
+------------------
+git push -f origin master
+-------------------------
+git branch
+git branch <branch_name>
+git checkout <branch_name>
+-------------------------
+git clone <repo_name>
+---------------------
+git reset --hard  
+-----------------------
+git reset HEAD  
+--------------------
+git rm <file Name>  
+--------------------
+git config --list
+------------------
+(1) rm -rf .git/
+
+(2) git init
+
+(3) git remote add origin https://repository.remote.url
+
+(4) git commit -m “Commit message”
+
+(5) git push -f origin master
+----------------------
+git clone <repo URL>
+-----------------------
+
+git pull origin main --allow-unrelated-histories
+
+--------------------------------------
+
+git config --system core.longpaths true //to allow long filepath by gh-pages

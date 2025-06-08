@@ -1,0 +1,8 @@
+Revert the Commit
+-----------
+
+git show -s --format=%H
+
+git revert <commit-hash>
+
+git push origin <branch-name>
