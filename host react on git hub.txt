@@ -1,0 +1,67 @@
+ - npx create-react-app my-app
+ - npm install gh-pages --save-dev
+
+ - Goto package.json
+ 		1. ------------
+			  "name": "my-app",
+			  "version": "0.1.0",
+			+ "homepage": "https://ayushdce2.github.io/tutorial_food/",
+			  "private": true,
+		2. ------------------
+				"scripts": {
+			+   "predeploy": "npm run build",
+			+   "deploy": "gh-pages -d build",
+			    "start": "react-scripts start",
+			    "build": "react-scripts build",
+ - git remote add origin https://github.com/{username}/{repo-name}.git
+ - npm run deploy
+ - Branch: gh-pages
+   Folder: / (root)
+
+PARCEl WAY2----------------PENDING
+
+ - npm install --save-dev parcel
+ - npm run build
+ - npm run deploy
+ - "scripts": {
+  
+      
+    "start": "parcel",
+  
+      
+    "build": "parcel build",
+
+    "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist"
+  
+    },
+
+Vite Way-----------------------------------------------------
+
+
+npm install --save-dev gh-pages
+
+In vite.config.js, set the base path (replace your-repo):
+export default defineConfig({
+  base: '/your-repo-name-only/',
+  plugins: [react()],
+})
+
+In package.json, add:
+"scripts": {
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist"
+}
+
+
+package.json
+-----------------
+ "name": "book-product",
+  "private": true,
+  "version": "0.0.0",
+++  "homepage": "https://aishwaryaparab.github.io/book-landing-page/",
+  "type": "module",
+
+npm run deploy
+
+https://medium.com/@aishwaryaparab1/deploying-vite-deploying-vite-app-to-github-pages-166fff40ffd3
