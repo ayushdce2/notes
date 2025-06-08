@@ -1,0 +1,144 @@
+#React-
+	opensource js library,
+	used for developing interfaces by reusable components
+
+#Why React
+	component based architecture
+	Virtual DOM- instead updating whole page, it updates modified part only
+	Large add-ons(libraries and tools)
+
+#Disadvantage of React
+	- Poor documentation
+	- UI focused only, will have to use other backend languages
+
+#React JSX
+	- Javascript XML
+	- allows to write HTML
+
+#Expression in React
+	- use curley bracket { }
+
+#for Multiline HTML put it in brackets <> </>
+
+#Setting React app
+	- install node
+	- npx create-react-app
+	- cd <app_folder_name>
+	- npm start
+	- goto localhost:3000
+
+#Component
+	- component name starts with Uppercase letter
+
+#Component Lifecycyle
+	1. Mounting- means putting element in DOM. Methods called are:
+		(1) constructor
+		(2) getDerivedStateFromProps() - called just before elements in DOM
+		(3) render() - puts HTML to the DOM
+		(4) componentDidMount() - called after component is rendered in DOM
+
+	2. Updating - executes after Mounting
+		methods called during updation are:
+		(1) react props- arguments passed into React Component
+			syntax - <component_name name="my_name" />
+		(2) react events- eg, click, change, mouseover etc
+				syntax - <button onclick={abc}> Click </button>
+			passing argument to the function
+				syntax - 
+				const abc = (a)=>{
+					alert(a);
+				}
+				<button onclick={ ()=> abc("argument") }
+		(3) 
+
+	3. Unmounting
+
+#Ternary Operator
+	consition ? true : false
+
+#Map Method
+	#Usage 1
+		var number = [1,2,3]
+		number.map((currentValue) = >{
+			return currentValue;
+		})
+	#Usage 2
+		var number = [1,2,3]
+		number.map((current)=>{
+			<li key={current.id}>{ current }</li>
+		})
+
+#React Router
+	npm i -D react-router-dom
+	
+	step1- goto index.js
+		<BrowserRouter>
+			<Routes>
+				<Route path="/" element={<Home/>} />
+				<Route index element={<Home/>} />
+				<Route path="about" element={<About/>} />
+				<Route path="*" element={<NoPage/>} />
+			</Routes>
+		</BrowserRouter>
+
+#React Fragment
+
+	to add multiline HTML, a node is required eg,
+		<div>
+			<h2>jsshgf</h2>
+			<p>sjjgdf</p>			
+		</div>
+
+	instead use React Fragment, it will not add node to DOM and hence will take less memory comparatively, eg,
+	<React.Fragment>
+		<h2>jsshgf</h2>
+		<p>sjjgdf</p>
+	</React.Fragment>
+
+	Shorthand, eg,
+	<React.Fragment>
+		<h2>jsshgf</h2>
+		<p>sjjgdf</p>
+	</React.Fragment>
+
+#Difference between Props and State
+	Props-
+		* data passed from one component to another
+		* props are read only (immutable)
+	State-
+		* data passed within the component
+		* state can be updated (mutable)
+
+#CSS
+	* Inline Styling
+		<p style={{ color: "red" }}> jgfjj </p>
+	* Internal
+		const my_style = {
+			color: "white",
+			font-family:"arial",
+			fontSize:"12px"
+		}
+
+		<h1 style={my_style}>ldknflkdjflkdjlkf</h1>
+	* External Styling
+		just do it as done before.
+#SASS
+	is a css preprocessor, sass files are executed on server and sends css to browser
+	npm i sass
+	create file with extension .scss
+	eg,
+		#mystyle.scss
+			$mycolor: red;
+			h1{
+			color: $mycolor;
+			}
+
+#React Hooks
+	- it allows to use advanced features without using Class
+	- should be used in topmost scope of code
+	- React bulit in hooks eg, useEffect, useState
+
+	#useState Hook -
+		used for storing state within component
+	#useEffect - 
+		
